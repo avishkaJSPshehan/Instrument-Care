@@ -8,5 +8,9 @@
 <body>
 
 <?php include 'app/components/navbar.php'; ?>
+<?php include 'app/components/Hero-Section.php'; ?>
+
+
+
 </body>
 </html>
