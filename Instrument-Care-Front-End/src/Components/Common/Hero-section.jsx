@@ -21,7 +21,7 @@ export default function Hero() {
           Find certified technicians, track your repairs, and ensure your scientific instruments perform at their best all in one platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-orange-400 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-500 transition">
+          <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-400 transition">
             Find a Technician
           </button>
           <button className="bg-white border border-gray-300 text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">
