@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Hero() {
+export default function Testing() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-20"
-      style={{ backgroundImage: `url('src/assets/images/hero-bg-5.jpg')` }}
+      style={{ backgroundImage: `url('arc/assets/images/hero-bg-5.jpg')` }}
     >
       {/* Overlay with blur */}
-      {/* <div className="absolute inset-0 bg-white/0 z-0" /> */}
+      <div className="absolute inset-0 bg-white/0 z-0" />
 
       {/* Centered Content Layer */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center space-y-10">
