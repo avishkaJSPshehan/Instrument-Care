@@ -3,7 +3,10 @@ import { CheckCircle } from "lucide-react"; // Icon
 
 export default function WhyUs() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section
+      className="py-16 px-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('src/assets/images/why-us-bg.jpg')" }} // ✅ replace with your path
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Image */}
         <div className="flex-1">
@@ -44,7 +47,7 @@ export default function WhyUs() {
           </ul>
 
           <button className="bg-orange-400 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-500 transition">
-            Book Now →
+            Find Now →
           </button>
         </div>
       </div>
