@@ -4,6 +4,8 @@ import Hero from '../Components/Common/Hero-section'
 import FeatureCards from '../Components/Common/Cart'
 import Services from '../Components/Common/Service'
 import WhyUs from '../Components/Common/Why-Us'
+import TestimonialSection from '../Components/Common/Testimonials'
+import AppointmentSection from '../Components/Common/Appointment'
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <FeatureCards/>
       <Services/>
       <WhyUs />
+      <TestimonialSection />
+      <AppointmentSection/>
     </>
   )
 }
