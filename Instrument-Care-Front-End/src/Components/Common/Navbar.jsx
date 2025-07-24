@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import NationalLogo from "../../assets/images/national-logo.jpg";
+import NsfLogo from "../../assets/images/NSF-Logo.jpg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,8 +15,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="src/assets/images/national-logo.jpg" alt="Logo" className="h-14 w-14s" />
-            <img src="src/assets/images/NSF-Logo.jpg" alt="Logo" className="h-11 w-10s" />
+            <img src={NationalLogo} alt="National Logo" className="h-18 w-18" />
+            <img src={NsfLogo} alt="NSF Logo" className="h-13 w-25" />
             {/* <span className="text-xl font-semibold text-gray-800">Instrument Care</span> */}
           </div>
 
@@ -37,9 +38,11 @@ export default function Navbar() {
             {/* <a href="#" className="text-orange-600 font-medium hover:underline font-poppins">
               Log In
             </a> */}
-            <button className="bg-orange-200 text-orange-600 px-4 py-2 rounded-md font-medium hover:bg-orange-100 transition font-poppins">
-              Log In
-            </button>
+            <Link to="/auth/login">
+              <button className="bg-orange-200 text-orange-600 px-4 py-2 rounded-md font-medium hover:bg-orange-100 transition font-poppins">
+                Log In
+              </button>
+            </Link>
             <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
               Create an account
             </button>
