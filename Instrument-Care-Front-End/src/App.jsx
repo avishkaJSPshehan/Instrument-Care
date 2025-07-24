@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import About from './pages/About';
 import Technician from './pages/Technician';
 import Contact from './pages/Contact';
+import Login from './Pages/Auth/login';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/technician" element={<Technician />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/auth/login" element={<Login />} />
       </Routes>
     </Router>
   );
