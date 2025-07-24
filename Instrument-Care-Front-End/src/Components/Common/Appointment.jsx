@@ -22,8 +22,8 @@ export default function AppointmentSection() {
           quality handyman solutions! */}
           Start your repair process quickly and easily with trusted professionals at your fingertips.
         </p>
-        <button className="inline-flex items-center justify-center px-6 py-3 bg-orange-200 text-[#FF8356] font-poppins rounded-lg font-semibold hover:opacity-90 transition">
-          Book Now
+        <button className="inline-flex items-center justify-center px-6 py-3 bg-orange-200 text-[#FF8356] font-poppins rounded-lg font-semibold hover:opacity-90 transition hover:bg-orange-600 hover:text-white">
+          Find a Technician
           <span className="ml-2 text-lg">➝</span>
         </button>
       </div>
