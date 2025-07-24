@@ -17,9 +17,9 @@ export default function AboutHero() {
       {/* Wider Content */}
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6">
         <div className="text-center">
-            <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
+            {/* <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
                 ── About Extech ──
-            </span>
+            </span> */}
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-[#1B1B1D] font-poppins">
             We Are Revolutionizing <span className="text-[#e78f0c]">Scientific Instrument Repairs</span> Through Technology
           </h1>
@@ -60,7 +60,7 @@ export default function AboutHero() {
 
         {/* Button */}
         <div className="mt-10 text-center">
-          <button className="bg-[#ee8828] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#ff9900] transition mx-auto">
+          <button className="bg-[#ee8828] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#ff9900] transition mx-auto font-poppins">
             Explore More <ArrowRight size={18} />
           </button>
         </div>
