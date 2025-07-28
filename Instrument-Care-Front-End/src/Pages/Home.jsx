@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <FeatureCards/>
+      {/* <FeatureCards/> */}
       <Services/>
       <WhyUs />
       <TestimonialSection />
