@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 
 const cards = [
   {
@@ -7,85 +7,88 @@ const cards = [
     title2: "Director General",
     title3: "National Science Foundation",
     description:
-      "To strengthen the manufacturing community. To support new partnerships and to help manufacturers with emerging technology, To adopt sustainable solutions and transform their interventions allowing production industry in Sri Lanka, which has been lagging behind over the past years we NSF, expect that our initiative will augment the culture of entrepreneurship in our country. It can also provide solutions and learning opportunities to inspire the entrepreneurial minds in our country to build more businesses creating better opportunities. This in return will stimulate more efficient production of higher quality goods and services, on which our nation’s prosperity depends.",
+      "To strengthen the manufacturing community. To support new partnerships and to help manufacturers with emerging technology...",
   },
   {
-    icon: "📈",
-    title: "Growth Forecasting",
+    image: "src/assets/images/nilanthi.jpg",
+    title1: "Prof. Nilanthi de Silva",
+    title2: "Vice-Chancellor",
+    title3: "University of Kelaniya",
     description:
-      "Forecast your business growth accurately using data-driven techniques.",
+      "We are very happy that the NSF has taken the initiative to establish a database with details of high-end scientific instruments scattered across Sri Lanka in universities and R&D institutions.",
   },
   {
-    icon: "💼",
-    title: "Investment Strategies",
+    image: "src/assets/images/ranjith.jpg",
+    title1: "Emeritus Prof. Ranjith Senaratne",
+    title2: "Former Vice-Chanceller, University of Ruhuna",
+    title3: "Ex-Chair of the National Science Foundation",
     description:
-      "Explore diverse and smart investment options for small businesses.",
+      "Sri Lanka has over 20 state-owned higher education institutions, a comparable number R&D institutions, and several public sector institutions, such as Sri Lanka Atomic Energy Board, Sri Lanka Standard Institute and Board of Investment, which collectively possess  an immense instrument base including high-end equipment",
   },
   {
-    icon: "🧾",
-    title: "Expense Tracking Tips",
+    image: "src/assets/images/raviraj1.png",
+    title1: "Prof. Ravirajan",
+    title2: "Dean and Senior Professor",
+    title3: "University of Jaffna",
     description:
-      "Best practices for monitoring and minimizing unnecessary expenses.",
+      "Even though  the scientific community and funding agencies had recognized the need to develop a Database of the Scientific Instruments available in the Higher Educational Institutions (HEIs) in the country a long time ago, it did not materialise until recently.",
   },
   {
-    icon: "🔐",
-    title: "Secure Transactions",
+    image: "src/assets/images/vitha.jpg",
+    title1: "Prof. Meththika Vithanage",
+    title2: "Faculty of Applied Sciences",
+    title3: "University of Sri Jayewardenepura",
     description:
-      "How to ensure all your digital transactions are safe and protected.",
+      "This NID helps to locate and place advanced analytical instruments required for both research work and commercial testing purposes. Also, this gives information for planning the instrument budget in proposal formulation.  This will serve as a resource pool for sharing equipment, which has gathered scattered information in to a one platform. A much needed initiative executed by NSF.",
   },
-  {
-    icon: "🕒",
-    title: "Time Management for Teams",
-    description:
-      "Boost productivity by optimizing your team’s daily workflow.",
-  },
+  
 ];
 
 export default function LeaderMessage() {
   const scrollRef = useRef(null);
-  const cardRef = useRef(null);
 
-  // Scroll horizontally by 3 cards every 2 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({
-            left: 300,
-            behavior: "smooth",
-            });
-
-            // Reset scroll if reached end
-            if (
-            scrollRef.current.scrollLeft + scrollRef.current.offsetWidth >=
-            scrollRef.current.scrollWidth
-            ) {
-            scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
-            }
-        }
-        }, 2000);
-
-        return () => clearInterval(interval);
-    }, []);
+  const scroll = (scrollOffset) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: scrollOffset,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section className="relative py-12 px-4 sm:px-6 flex justify-center overflow-hidden">
-      {/* Background image with blur overlay */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{
-          backgroundImage: `url('src/assets/images/hero-bg-2.png')`, // Replace with your actual image path
-        }}
+        style={{ backgroundImage: `url('src/assets/images/hero-bg-2.png')` }}
       >
         <div className="w-full h-full backdrop-blur-sm bg-white/50"></div>
       </div>
 
-      {/* Foreground content */}
+      {/* Content */}
       <div className="max-w-[1300px] w-full relative z-10">
         <h2 className="text-xl sm:text-5xl font-semibold text-gray-900 mb-6 font-poppins text-center">
-          Messages from Leading{" "}
-          <span className="text-orange-400">Stakeholders</span>
+          Messages from Leading <span className="text-orange-400">Stakeholders</span>
         </h2>
 
+        {/* Buttons */}
+        <div className="flex justify-between items-center mb-4">
+          <button
+            onClick={() => scroll(-400)}
+            className="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded disabled:opacity-50"
+          >
+            ← Prev
+          </button>
+          <button
+            onClick={() => scroll(400)}
+            className="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
+          >
+            Next →
+          </button>
+        </div>
+
+        {/* Horizontal Slider */}
         <div
           ref={scrollRef}
           className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar"
@@ -93,7 +96,6 @@ export default function LeaderMessage() {
           {cards.map((card, index) => (
             <div
               key={index}
-              ref={index === 0 ? cardRef : null}
               className="min-w-[380px] max-w-[380px] min-h-[520px] bg-white shadow-sm rounded-lg p-4 flex-shrink-0 flex flex-col justify-between"
             >
               <div>
@@ -118,12 +120,6 @@ export default function LeaderMessage() {
                   {card.description}
                 </p>
               </div>
-              {/* Uncomment if you want a button again */}
-              {/* <div className="mt-6">
-                <button className="inline-flex items-center text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-700 px-4 py-2 rounded hover:opacity-90 transition">
-                  Read More <span className="ml-2">→</span>
-                </button>
-              </div> */}
             </div>
           ))}
         </div>
