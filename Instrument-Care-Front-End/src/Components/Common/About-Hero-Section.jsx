@@ -14,51 +14,54 @@ export default function AboutHero() {
         <div className="absolute inset-0 bg-white/40 backdrop-blur-xs" />
       </div>
 
-      {/* Wider Content */}
+      {/* Content Wrapper */}
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6">
+        {/* Heading and Intro */}
         <div className="text-center">
-            {/* <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
-                ── About Extech ──
-            </span> */}
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-[#1B1B1D] font-poppins">
-            We Are Revolutionizing <span className="text-[#e78f0c]">Scientific Instrument Repairs</span> Through Technology
+            We Are Revolutionizing{" "}
+            <span className="text-[#e78f0c]">Scientific Instrument Repairs</span>{" "}
+            Through Technology
           </h1>
           <p className="text-gray-600 mt-4 text-base leading-relaxed max-w-4xl mx-auto font-poppins">
             It’s no longer acceptable for scientific progress to stall due to faulty equipment. Instrument Care System bridges the gap between instrument owners and skilled technicians through an intelligent, secure, and streamlined platform designed for the scientific community.
           </p>
         </div>
 
-        {/* Expanded Features */}
-        <div className="mt-10 grid md:grid-cols-2 gap-12 text-left">
-          <div className="flex items-start gap-4">
-            <div className="bg-[#EEF0FC] p-3 rounded-full">
-              <svg className="w-6 h-6 text-[#e78f0c]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M5 13l4 4L19 7" />
-              </svg>
+        {/* Vision and Mission - Side-by-side Cards with Top-Centered Icon & Title */}
+        <div className="mt-12 grid md:grid-cols-2 gap-8">
+          {/* Mission Card */}
+          <div className="bg-white/70 shadow-xl border-l-4 border-orange-400 rounded-xl p-6 flex flex-col items-center text-center">
+            <div className="flex flex-col items-center mb-4">
+              {/* <div className="bg-orange-500 text-white p-4 rounded-full mb-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M5 13l4 4L19 7" />
+                </svg>
+              </div> */}
+              <h4 className="text-xl font-bold text-gray-900 font-poppins">Our Mission</h4>
             </div>
-            <div>
-              <h4 className="font-bold text-md">Mission</h4>
-              <p className="text-sm text-gray-600 font-poppins">
-                To empower labs, researchers, and organizations by providing a fast, reliable, and transparent system for repairing and maintaining scientific instruments.
-              </p>
-            </div>
+            <p className="text-sm text-gray-700 font-poppins leading-relaxed">
+              To empower labs, researchers, and organizations by providing a fast, reliable, and transparent system for repairing and maintaining scientific instruments.
+            </p>
           </div>
-          <div className="flex items-start gap-4">
-            <div className="bg-[#EEF0FC] p-3 rounded-full">
-              <svg className="w-6 h-6 text-[#e78f0c]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M12 20l9-5-9-5-9 5 9 5z" />
-              </svg>
+
+          {/* Vision Card */}
+          <div className="bg-white/70 shadow-xl border-l-4 border-yellow-400 rounded-xl p-6 flex flex-col items-center text-center">
+            <div className="flex flex-col items-center mb-4">
+              {/* <div className="bg-yellow-500 text-white p-4 rounded-full mb-2">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                </svg>
+              </div> */}
+              <h4 className="text-xl font-bold text-gray-900 font-poppins">Our Vision</h4>
             </div>
-            <div>
-              <h4 className="font-bold text-md">Vision</h4>
-              <p className="text-sm text-gray-600 font-poppins">
-                To be the leading digital ecosystem for scientific instrument care, where every broken device finds the right expert, without delay.
-              </p>
-            </div>
+            <p className="text-sm text-gray-700 font-poppins leading-relaxed">
+              To be the leading digital ecosystem for scientific instrument care, where every broken device finds the right expert, without delay.
+            </p>
           </div>
         </div>
 
-        {/* Button */}
+        {/* CTA Button */}
         <div className="mt-10 text-center">
           <button className="bg-[#ee8828] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#ff9900] transition mx-auto font-poppins">
             Explore More <ArrowRight size={18} />
