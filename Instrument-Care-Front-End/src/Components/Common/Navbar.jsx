@@ -43,9 +43,11 @@ export default function Navbar() {
                 Log In
               </button>
             </Link>
-            <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
-              Create an account
-            </button>
+            <Link to="/auth/tech-registration">
+              <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
+                Create an account
+              </button>
+            </Link>
           </div>
 
           {/* Hamburger icon */}

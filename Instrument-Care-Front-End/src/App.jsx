@@ -6,6 +6,7 @@ import About from './pages/About';
 import Technician from './pages/Technician';
 import Contact from './pages/Contact';
 import Login from './Pages/Auth/login';
+import Technician_Registration from './Pages/Auth/Technician-Registration';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/technician" element={<Technician />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/tech-registration" element={<Technician_Registration />} />
       </Routes>
     </Router>
   );

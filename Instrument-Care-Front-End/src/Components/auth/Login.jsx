@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
@@ -73,9 +74,11 @@ export default function LoginPage() {
             Ready to help others and grow your career?
             Set up your technician profile and start accepting service requests!
           </p>
-          <button className="border border-white px-8 py-2 rounded-md hover:bg-white hover:text-orange-600 transition text-lg font-poppins font-semibold">
-            I'M TECHNITIAN
-          </button>
+          <Link to="/auth/tech-registration">
+            <button className="border border-white px-8 py-2 rounded-md hover:bg-white hover:text-orange-600 transition text-lg font-poppins font-semibold">
+              I'M TECHNITIAN
+            </button>
+          </Link>
         </div>
       </div>
     </div>
