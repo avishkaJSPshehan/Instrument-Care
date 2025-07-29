@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
+
 export default function LoginPage() {
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -11,22 +12,32 @@ export default function LoginPage() {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-gray-100 ">
-      <div className="w-full max-w-6xl h-full md:h-[700px] flex flex-col md:flex-row m-0 p-0 rounded-2xl shadow-2xl bg-white">
+    <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden m-0 p-0">
+
+      {/* Background Image with Blur */}
+      <div
+        className="absolute inset-0 bg-cover bg-center blur-xs z-0"
+        style={{
+          backgroundImage: "url('../../src/assets/images/hero-bg-5.jpg')",
+        }}
+      ></div>
+
+      {/* Main Login Container */}
+      <div className="relative z-10 w-full max-w-6xl h-full md:h-[700px] flex flex-col md:flex-row bg-white bg-opacity-90 rounded-none md:rounded-2xl shadow-2xl">
 
         {/* Left Panel - Sign In */}
-        <div className="w-full md:w-1/2 h-full flex flex-col justify-center p-10 md:p-16">
-          <h2 className="text-4xl font-bold mb-8 text-center md:text-left">Sign In</h2>
+        <div className="w-full md:w-1/2 h-full flex flex-col justify-center px-8 py-6 md:px-16 md:py-12">
+          <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Sign In</h2>
 
           {/* Social Logins */}
-          <div className="flex gap-5 justify-center md:justify-start mb-6">
+          <div className="flex gap-5 justify-center md:justify-start mb-5">
             <button className="p-3 border rounded-full"><FcGoogle size={24} /></button>
             <button className="p-3 border rounded-full text-blue-600"><FaFacebookF size={18} /></button>
             <button className="p-3 border rounded-full text-black"><FaGithub size={20} /></button>
             <button className="p-3 border rounded-full text-blue-700"><FaLinkedinIn size={20} /></button>
           </div>
 
-          <p className="text-md text-gray-500 mb-5 text-center md:text-left">
+          <p className="text-md text-gray-500 mb-4 text-center md:text-left">
             or use your email password
           </p>
 
@@ -52,9 +63,9 @@ export default function LoginPage() {
         <div
           className="hidden md:flex w-1/2 h-full flex-col justify-center items-center px-12 text-white rounded-2xl"
           style={{
-            background: "linear-gradient(135deg, #3083DC, #3298BA)",
+            background: "linear-gradient(135deg, #e78f0c, #e78f9c)",
             borderTopLeftRadius: "120px",
-            borderBottomLeftRadius: "120px"
+            borderBottomLeftRadius: "120px",
           }}
         >
           <h2 className="text-4xl font-bold mb-3">Hello, Friend!</h2>
