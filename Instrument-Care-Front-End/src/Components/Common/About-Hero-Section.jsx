@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function AboutHero() {
   return (
@@ -63,9 +64,11 @@ export default function AboutHero() {
 
         {/* CTA Button */}
         <div className="mt-10 text-center">
-          <button className="bg-[#ee8828] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#ff9900] transition mx-auto font-poppins">
-            Explore More <ArrowRight size={18} />
-          </button>
+          <Link to="https://nid.nsf.gov.lk/">
+            <button className="bg-[#ee8828] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#ff9900] transition mx-auto font-poppins">
+              Explore More <ArrowRight size={18} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

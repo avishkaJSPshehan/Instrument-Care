@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function LoginPage() {
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -11,9 +16,24 @@ export default function LoginPage() {
     };
   }, []);
 
+  const handleLogin = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginData),
+      });
+
+      const result = await response.json();
+      console.log("Login Response:", result);
+      // Handle success: store token, navigate, etc.
+    } catch (err) {
+      console.error("Login failed:", err);
+    }
+  };
+
   return (
     <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden m-0 p-0">
-
       {/* Background Image with Blur */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -24,7 +44,7 @@ export default function LoginPage() {
 
       {/* Main Login Container */}
       <div className="relative z-10 transform -translate-y-18 w-full max-w-6xl md:h-[700px] flex flex-col md:flex-row bg-gray-50 bg-opacity-90 rounded-none md:rounded-2xl shadow-2xl">
-
+        
         {/* Left Panel - Sign In */}
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center px-8 py-6 md:px-16 md:py-12">
           <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Sign In</h2>
@@ -34,7 +54,7 @@ export default function LoginPage() {
               <h4 className="text-xl font-bold text-gray-900 font-poppins">Important</h4>
             </div>
             <p className="text-sm text-gray-700 font-poppins leading-relaxed">
-              This system is integrated with the <b>National Instrument Database (NID)</b>.Use your existing <b>NID username</b> and <b>password</b> to sign in. No need to create a new account.
+              This system is integrated with the <b>National Instrument Database (NID)</b>. Use your existing <b>NID username</b> and <b>password</b> to sign in. No need to create a new account.
             </p>
           </div>
 
@@ -46,16 +66,25 @@ export default function LoginPage() {
             type="email"
             placeholder="Email"
             className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+            value={loginData.email}
+            onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
           />
           <input
             type="password"
             placeholder="Password"
             className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+            value={loginData.password}
+            onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
           />
 
-          <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer font-poppins">Forget Your Password?</p>
+          <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer font-poppins">
+            Forget Your Password?
+          </p>
 
-          <button className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500">
+          <button
+            className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500"
+            onClick={handleLogin}
+          >
             SIGN IN
           </button>
         </div>
@@ -76,7 +105,7 @@ export default function LoginPage() {
           </p>
           <Link to="/auth/tech-registration">
             <button className="border border-white px-8 py-2 rounded-md hover:bg-white hover:text-orange-600 transition text-lg font-poppins font-semibold">
-              I'M TECHNITIAN
+              I'M TECHNICIAN
             </button>
           </Link>
         </div>

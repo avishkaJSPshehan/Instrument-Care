@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react"; // Email icon
+import { Link } from "react-router-dom";
 import NationalLogo from "../../assets/images/national-logo.png";
 
 
@@ -15,7 +16,9 @@ export default function Footer() {
             Instrument Care
           </div>
           <div className="flex flex-wrap items-center gap-6 text-lg text-white font-poppins ">
-            <a href="#" className="hover:text-orange-600">Home</a>
+            <Link to="/">
+              <a href="#" className="hover:text-orange-600">Home</a>
+            </Link>
             <a href="#" className="hover:text-orange-600">About</a>
             <a href="#" className="hover:text-orange-600">Technician</a>
             <a href="#" className="hover:text-orange-600">Contact Us</a>
