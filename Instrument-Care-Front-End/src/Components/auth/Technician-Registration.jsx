@@ -3,12 +3,58 @@ import React, { useEffect, useState } from "react";
 export default function TechnicianAuthPage() {
   const [isRegistering, setIsRegistering] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    skills: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "auto";
     };
   }, []);
+
+  const handleRegister = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/technician/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      console.log("Registration Response:", result);
+      // You can show success message or redirect here
+    } catch (err) {
+      console.error("Registration failed:", err);
+    }
+  };
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/technician/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginData),
+      });
+
+      const result = await response.json();
+      console.log("Login Response:", result);
+      // Handle login success, store token, redirect, etc.
+    } catch (err) {
+      console.error("Login failed:", err);
+    }
+  };
 
   return (
     <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden m-0 p-0">
@@ -30,8 +76,6 @@ export default function TechnicianAuthPage() {
           }`}
           style={{
             background: "linear-gradient(135deg, #e78f0c, #e78f0c)",
-            // borderTopLeftRadius: isRegistering ? "0px" : "0px",
-            // borderBottomLeftRadius: isRegistering ? "0px" : "0px",
             borderTopRightRadius: isRegistering ? "120px" : "120px",
             borderBottomRightRadius: isRegistering ? "120px" : "120px",
           }}
@@ -54,13 +98,40 @@ export default function TechnicianAuthPage() {
 
           {isRegistering ? (
             <>
-              <input type="text" placeholder="Full Name" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="email" placeholder="Email" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="text" placeholder="Phone Number" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="text" placeholder="Technical Skills" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="password" placeholder="Password" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="password" placeholder="Confirm Password" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <button className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500">
+              <input type="text" placeholder="Full Name"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
+              <input type="email" placeholder="Email"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
+              <input type="text" placeholder="Phone Number"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
+              <input type="text" placeholder="Technical Skills"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.skills}
+                onChange={(e) => setFormData({ ...formData, skills: e.target.value })}
+              />
+              <input type="password" placeholder="Password"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.password}
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              />
+              <input type="password" placeholder="Confirm Password"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={formData.confirmPassword}
+                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+              />
+              <button
+                onClick={handleRegister}
+                className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500"
+              >
                 REGISTER
               </button>
               <p className="text-sm text-center mt-4 font-poppins">
@@ -72,10 +143,23 @@ export default function TechnicianAuthPage() {
             </>
           ) : (
             <>
-              <input type="email" placeholder="Email" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <input type="password" placeholder="Password" className="w-full mb-4 p-4 border rounded-md text-md font-poppins" />
-              <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer font-poppins">Forget Your Password?</p>
-              <button className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500">
+              <input type="email" placeholder="Email"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={loginData.email}
+                onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+              />
+              <input type="password" placeholder="Password"
+                className="w-full mb-4 p-4 border rounded-md text-md font-poppins"
+                value={loginData.password}
+                onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+              />
+              <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer font-poppins">
+                Forget Your Password?
+              </p>
+              <button
+                onClick={handleLogin}
+                className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500"
+              >
                 SIGN IN
               </button>
               <p className="text-sm text-center mt-4 font-poppins">
