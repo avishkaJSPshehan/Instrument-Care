@@ -10,7 +10,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-white/0 z-0" /> */}
 
       {/* Centered Content Layer */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center space-y-10">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center space-y-10 font-poppins">
         <span className="bg-orange-200 text-orange-500 text-sm font-semibold px-3 py-1 rounded-full inline-block">
           READY TO FIND YOUR TECHNICIAN
         </span>
