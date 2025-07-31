@@ -82,7 +82,7 @@ export default function TechnicianHeader() {
 function IconButton({ icon, label }) {
   return (
     <button
-      className="w-10 h-10 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors bg-transparent flex items-center justify-center cursor-pointer"
+      className="w-10 h-10 rounded-full border border-gray-300 hover:bg-orange-300 transition-colors bg-transparent flex items-center justify-center cursor-pointer"
       aria-label={label}
     >
       {icon}
