@@ -1,14 +1,17 @@
 import React from 'react'
 import Navbar from '../Components/Common/Navbar'
 import Footer from '../Components/Common/Footer'
+import TechnicianHeader from '../Components/Technician/Technician-Hero-Section'
+import RecentTechniciansSection from '../Components/Technician/RecentTechniciansSection'
+import AppointmentSection from '../Components/Common/Appointment'
 
 export default function Technician() {
   return (
     <>
       <Navbar />
-      <div className="p-6">
-        <h1 className="text-3xl font-bold">Technician Page</h1>
-      </div>
+      <TechnicianHeader />
+      <RecentTechniciansSection />
+      <AppointmentSection/>
       <Footer />
     </>
   )
