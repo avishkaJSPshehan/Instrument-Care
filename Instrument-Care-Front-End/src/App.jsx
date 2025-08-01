@@ -9,6 +9,8 @@ import Login from './Pages/Auth/login';
 import Technician_Registration from './Pages/Auth/Technician-Registration';
 import Technician_Dashboard from './Pages/Technician/Dashboard';
 import User_Dashboard from './Pages/Owner/Dashboard';
+import Service_Request from './Pages/Technician/Service_Request'
+import Technician_Profile from './Pages/Technician/Profile'
 
 export default function App() {
   return (
@@ -27,6 +29,10 @@ export default function App() {
 
         {/* ===== Technician Routes ===== */}
         <Route path="/tech/dashboard" element={<Technician_Dashboard />} />
+        <Route path="/tech/service-request" element={<Service_Request />} />
+        <Route path="/tech/profile" element={<Technician_Profile />} />
+
+
 
         {/* ===== User Routes ===== */}
         <Route path="/user/dashboard" element={<User_Dashboard />} />

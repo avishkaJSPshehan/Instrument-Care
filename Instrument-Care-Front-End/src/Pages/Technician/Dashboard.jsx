@@ -15,7 +15,7 @@ export default function Technician_Dashboard() {
       <div
         className="flex flex-col md:flex-row h-full w-full p-2 md:p-4 gap-4 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/src/assets/images/technician-dashboard-bg-2.jpg')",
+          backgroundImage: "url('/src/assets/images/technician-dashboard-bg-4.jpg')",
         }}
       >
         {/* Sidebar */}

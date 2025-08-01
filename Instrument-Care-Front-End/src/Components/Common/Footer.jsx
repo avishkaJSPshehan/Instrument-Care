@@ -40,7 +40,7 @@ export default function Footer() {
 
       {/* Bottom Row */}
       <div className="max-w-7xl mx-auto mt-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 gap-4 font-poppins">
-        <p>© Copyright 2022. All Rights Reserved by National Science Foundation.</p>
+        <p>© Copyright 2025. All Rights Reserved by National Science Foundation.</p>
         <div className="flex gap-6">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
