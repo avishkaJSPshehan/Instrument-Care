@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function TechnicianAuthPage() {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -199,12 +200,14 @@ export default function TechnicianAuthPage() {
               <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer font-poppins">
                 Forget Your Password?
               </p>
-              <button
-                onClick={handleLogin}
-                className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500"
-              >
-                SIGN IN
-              </button>
+              <Link to="/tech/dashboard">
+                <button
+                  onClick={handleLogin}
+                  className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold font-poppins hover:bg-orange-500"
+                >
+                  SIGN IN
+                </button>
+              </Link>
               <p className="text-sm text-center mt-4 font-poppins">
                 Don’t have an account?{" "}
                 <button

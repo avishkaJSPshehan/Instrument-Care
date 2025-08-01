@@ -86,13 +86,15 @@ export default function LoginPage() {
           <p className="text-sm text-right text-blue-600 mb-5 cursor-pointer">
             Forget Your Password?
           </p>
-
-          <button
-            className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold hover:bg-orange-500"
-            onClick={handleLogin}
-          >
-            SIGN IN
-          </button>
+          
+          <Link to="/user/dashboard">
+            <button
+              className="w-full bg-orange-400 text-white py-3 rounded-md text-lg font-semibold hover:bg-orange-500"
+              onClick={handleLogin}
+            >
+              SIGN IN
+            </button>
+          </Link>
         </div>
 
         {/* Right Panel - Technician Join (hidden on mobile) */}

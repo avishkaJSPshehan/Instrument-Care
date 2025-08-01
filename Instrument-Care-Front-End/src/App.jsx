@@ -7,17 +7,29 @@ import Technician from './pages/Technician';
 import Contact from './pages/Contact';
 import Login from './Pages/Auth/login';
 import Technician_Registration from './Pages/Auth/Technician-Registration';
+import Technician_Dashboard from './Pages/Technician/Dashboard';
+import User_Dashboard from './Pages/Owner/Dashboard';
 
 export default function App() {
   return (
     <Router>
       <Routes>
+
+        {/* ===== Common Routes ===== */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/technician" element={<Technician />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* ===== Auth Routes ===== */}
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/tech-registration" element={<Technician_Registration />} />
+
+        {/* ===== Technician Routes ===== */}
+        <Route path="/tech/dashboard" element={<Technician_Dashboard />} />
+
+        {/* ===== User Routes ===== */}
+        <Route path="/user/dashboard" element={<User_Dashboard />} />
       </Routes>
     </Router>
   );
