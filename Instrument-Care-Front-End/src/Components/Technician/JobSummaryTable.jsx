@@ -1,0 +1,56 @@
+import React from "react";
+
+export default function JobSummaryTable() {
+  const jobs = [
+    ["Microscope", "Ava Thompson", "2024/07/25", "2024/08/25", "Pass"],
+    ["Spectrometer", "Sophia Martinez", "2024/07/25", "2024/08/25", "Rejected"],
+    ["Centrifuge", "James Anderson", "2024/07/25", "2024/08/25", "Pass"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+  ];
+
+  return (
+    <div className="bg-[#ffffff80] rounded-lg shadow-sm p-4 font-poppins">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="font-bold">Job Summary</h3>
+        <button className="bg-teal-600 text-white px-4 py-1 rounded-md text-sm">
+          View all
+        </button>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr className="border-b">
+              <th className="p-2">Instrument</th>
+              <th className="p-2">Owner</th>
+              <th className="p-2">Start Date</th>
+              <th className="p-2">End Date</th>
+              <th className="p-2">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {jobs.map((row, i) => (
+              <tr key={i} className="border-b">
+                {row.map((cell, j) => (
+                  <td
+                    key={j}
+                    className={`p-2 ${
+                      cell === "Pass"
+                        ? "text-green-500 font-bold"
+                        : cell === "Rejected"
+                        ? "text-red-500 font-bold"
+                        : cell === "Pending"
+                        ? "text-yellow-500 font-bold"
+                        : ""
+                    }`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
