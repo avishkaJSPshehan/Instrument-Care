@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import profileImage from '../../assets/images/profile-image.jpeg';
 
 export default function Sidebar() {
@@ -17,11 +18,25 @@ export default function Sidebar() {
         <p className="text-sm text-gray-800">Electrical Technician</p>
         <hr className="w-full border-gray-700 my-4" />
         <nav className="flex flex-col items-center space-y-4 w-full">
-          <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">
-            Dashboard
-          </button>
-          <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">Service Request</button>
-          <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">My Profile</button>
+
+            <Link to="/tech/dashboard">
+                <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">
+                    Dashboard
+                </button>
+            </Link>
+
+            <Link to="/tech/service-request">
+                <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">
+                    Service Request
+                </button>
+            </Link>
+
+            <Link to="/tech/profile">
+                <button className="bg-white/40 text-gray-800 hover:bg-white/80 font-bold px-4 py-2 rounded-md w-48">
+                    My Profile
+                </button>
+            </Link>
+
         </nav>
       </div>
 

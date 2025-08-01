@@ -47,7 +47,7 @@ export default function Navbar() {
             </Link>
 
             {/* Log out button */}
-            <Link to="/auth/tech-registration">
+            <Link to="/">
               <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
                 Log Out
               </button>
