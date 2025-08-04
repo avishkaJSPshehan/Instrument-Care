@@ -45,7 +45,7 @@ export default function Navbar() {
             </Link>
             <Link to="/auth/tech-registration">
               <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
-                Create an account
+                Become a Technician
               </button>
             </Link>
           </div>
@@ -77,7 +77,7 @@ export default function Navbar() {
               Log In
             </button>
             <button className="bg-orange-400 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500 transition font-poppins">
-              Create an account
+              Become a Technician
             </button>
           </div>
         )}
