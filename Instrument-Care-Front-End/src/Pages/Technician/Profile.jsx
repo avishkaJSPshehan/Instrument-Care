@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Technician/Navbar'
 import Sidebar from '../../Components/Technician/Sidebar'
 import Footer from '../../Components/Common/Footer'
-import ProfilePage from '../../Components/Technician/Profile'
+import EditProfileForm from "../../Components/Technician/EditProfileForm";
 
 export default function Technician_Profile() {
   return (
@@ -21,7 +21,7 @@ export default function Technician_Profile() {
 
         {/* Main Content */}
         <main className="flex-1 bg-[#ffffff80] rounded-lg p-4">
-          <h2 className="text-xl font-bold mb-4">Technician Profile</h2>
+          <EditProfileForm />
 
         </main>
       </div>
