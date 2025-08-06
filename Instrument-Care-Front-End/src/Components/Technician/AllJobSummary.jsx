@@ -1,9 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-export default function JobSummaryTable() {
+export default function AllJobSummary() {
   const jobs = [
     // Uncomment to test
+    ["Microscope", "Ava Thompson", "2024/07/25", "2024/08/25", "Pass"],
+    ["Spectrometer", "Sophia Martinez", "2024/07/25", "2024/08/25", "Rejected"],
+    ["Centrifuge", "James Anderson", "2024/07/25", "2024/08/25", "Pass"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["Microscope", "Ava Thompson", "2024/07/25", "2024/08/25", "Pass"],
+    ["Spectrometer", "Sophia Martinez", "2024/07/25", "2024/08/25", "Rejected"],
+    ["Centrifuge", "James Anderson", "2024/07/25", "2024/08/25", "Pass"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["Microscope", "Ava Thompson", "2024/07/25", "2024/08/25", "Pass"],
+    ["Spectrometer", "Sophia Martinez", "2024/07/25", "2024/08/25", "Rejected"],
+    ["Centrifuge", "James Anderson", "2024/07/25", "2024/08/25", "Pass"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
+    ["X-ray Equipment", "Isabella Brown", "2024/07/25", "2024/08/25", "Pending"],
     ["Microscope", "Ava Thompson", "2024/07/25", "2024/08/25", "Pass"],
     ["Spectrometer", "Sophia Martinez", "2024/07/25", "2024/08/25", "Rejected"],
     ["Centrifuge", "James Anderson", "2024/07/25", "2024/08/25", "Pass"],
@@ -13,14 +30,9 @@ export default function JobSummaryTable() {
   ];
 
   return (
-    <div className="bg-[#ffffff80] rounded-lg shadow-sm p-4 font-poppins">
+    <div className="bg-[#ffffff80] rounded-lg shadow-sm p-4 font-poppins min-h-[720px]">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="font-bold">Job Summary</h3>
-        <Link to='/tech/all-job-summary'>
-        <button className="bg-orange-600 text-white px-4 py-1 rounded-md text-sm hover:bg-orange-400">
-          View all
-        </button>
-        </Link>
+        <h3 className="font-bold">All Job Summary</h3>
       </div>
 
       <div className="overflow-x-auto">
@@ -29,7 +41,7 @@ export default function JobSummaryTable() {
             No job summaries found.
           </p>
         ) : (
-          <div className="max-h-[188px] overflow-y-auto">
+          <div className="max-h-[720px] overflow-y-auto">
             <table className="w-full text-left text-sm border-collapse">
               <thead>
                 <tr className="border-b">
