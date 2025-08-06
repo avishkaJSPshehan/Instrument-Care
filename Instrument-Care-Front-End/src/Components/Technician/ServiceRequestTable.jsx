@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 export default function ServiceRequestTable() {
   const requests = [
@@ -13,12 +14,14 @@ export default function ServiceRequestTable() {
   ];
 
   return (
-    <div className="bg-[#ffffff80] rounded-lg shadow-sm p-4 mb-6 font-poppins">
+    <div className="bg-[#ffffff80] rounded-lg shadow-sm p-4 mb-6 font-poppins min-h-[288px]">
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Service Request</h3>
-        <button className="bg-teal-600 text-white px-4 py-1 rounded-md text-sm">
+        <Link to='/tech/all-service-request'>
+        <button className="bg-orange-600 text-white px-4 py-1 rounded-md text-sm hover:bg-orange-400">
           View all
         </button>
+        </Link>
       </div>
 
       <div className="overflow-x-auto">
