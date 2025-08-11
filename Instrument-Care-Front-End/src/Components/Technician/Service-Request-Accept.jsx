@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ServiceRequestAccept({
-  formData = {
+  initialFormData = {
     ownerEmail: "jspshehan@gmail.com",
     yourEmail: "",
     subject: "",
     message: "",
   },
-  onChange = () => {},
   onBack = () => {},
   onSend = () => {},
 }) {
-  return (
-    <div className="rounded-lg p-4 sm:p-6 w-full  mx-auto shadow bg-[#ffffff80]">
+  const [formData, setFormData] = useState(initialFormData);
 
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  return (
+    <div className="rounded-lg p-4 sm:p-6 w-full mx-auto shadow bg-[#ffffff80]">
       {/* Section Title */}
       <h3 className="mb-2 font-bold text-lg">Response to the Service Request</h3>
       <hr className="mb-4" />
@@ -28,7 +33,7 @@ export default function ServiceRequestAccept({
           <input
             type="email"
             value={formData.ownerEmail}
-            onChange={(e) => onChange("ownerEmail", e.target.value)}
+            onChange={(e) => handleChange("ownerEmail", e.target.value)}
             className="border rounded px-2 py-1 w-full sm:w-2/3"
           />
         </div>
@@ -41,7 +46,7 @@ export default function ServiceRequestAccept({
           <input
             type="email"
             value={formData.yourEmail}
-            onChange={(e) => onChange("yourEmail", e.target.value)}
+            onChange={(e) => handleChange("yourEmail", e.target.value)}
             className="border rounded px-2 py-1 w-full sm:w-2/3"
           />
         </div>
@@ -54,7 +59,7 @@ export default function ServiceRequestAccept({
           <input
             type="text"
             value={formData.subject}
-            onChange={(e) => onChange("subject", e.target.value)}
+            onChange={(e) => handleChange("subject", e.target.value)}
             className="border rounded px-2 py-1 w-full sm:w-2/3"
           />
         </div>
@@ -67,7 +72,7 @@ export default function ServiceRequestAccept({
           <textarea
             rows="5"
             value={formData.message}
-            onChange={(e) => onChange("message", e.target.value)}
+            onChange={(e) => handleChange("message", e.target.value)}
             className="border rounded px-2 py-1 w-full sm:w-2/3"
           />
         </div>
@@ -76,17 +81,19 @@ export default function ServiceRequestAccept({
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center sm:justify-end gap-3 mt-4">
+          <Link to='/tech/service-request'>
+            <button
+              type="button"
+              onClick={onBack}
+              className="bg-red-500 hover:bg-red-400 text-white px-6 py-2 rounded-md font-semibold w-md"
+            >
+              Back
+            </button>
+          </Link>
           <button
             type="button"
-            onClick={onBack}
-            className="bg-red-500 hover:bg-red-400 text-white px-6 py-2 rounded-md font-semibold"
-          >
-            Back
-          </button>
-          <button
-            type="button"
-            onClick={onSend}
-            className="bg-green-500 hover:bg-green-400 text-white px-6 py-2 rounded-md font-semibold"
+            onClick={() => onSend(formData)}
+            className="bg-green-500 hover:bg-green-400 text-white px-6 py-2 rounded-md font-semibold w-md"
           >
             Send
           </button>

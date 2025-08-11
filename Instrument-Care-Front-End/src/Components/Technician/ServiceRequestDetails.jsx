@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ServiceRequestDetails({ details }) {
   // If no details are selected, show placeholders instead of real data
@@ -84,9 +85,11 @@ export default function ServiceRequestDetails({ details }) {
         <button className="bg-red-500 text-white px-6 py-2 rounded font-bold">
           Reject
         </button>
+        <Link to='/tech/accept-service-request'>
         <button className="bg-green-500 text-white px-6 py-2 rounded font-bold">
           Accept
         </button>
+        </Link>
       </div>
     </div>
   );
