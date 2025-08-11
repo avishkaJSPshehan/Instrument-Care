@@ -6,6 +6,7 @@ import ProfileFormRight from "./ProfileFormRight";
 export default function EditProfileForm() {
   const [formData, setFormData] = useState({
     fullName: "",
+    nic: "",
     email: "",
     address: "",
     personalNumber: "",
@@ -17,7 +18,11 @@ export default function EditProfileForm() {
     designation: "",
     workingHours: "",
     workingType: "",
-    hourlyCharge: ""
+    hourlyCharge: "",
+    institute_name: "",
+    designation: "",
+    laboratory_category: "",
+    instrument_category: "",
   });
 
   const handleChange = (e) => {
@@ -30,7 +35,7 @@ export default function EditProfileForm() {
 
       {/* Top Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <ProfileImageUpload />
+        <ProfileImageUpload formData={formData} handleChange={handleChange} />
         <ProfileFormLeft formData={formData} handleChange={handleChange} />
         <ProfileFormRight formData={formData} handleChange={handleChange} />
       </div>
