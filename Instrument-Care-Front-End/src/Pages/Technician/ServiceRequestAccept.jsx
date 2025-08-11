@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Navbar from '../../Components/Technician/Navbar'
 import Sidebar from '../../Components/Technician/Sidebar'
 import ServiceRequestTable_Request from "../../Components/Technician/ServiceRequestTable-Request";
-import ServiceRequestDetails from "../../Components/Technician/ServiceRequestDetails";
 import Footer from '../../Components/Common/Footer'
+import ServiceRequestAccept from'../../Components/Technician/Service-Request-Accept';
 
-export default function Service_Request() {
+export default function Accept_Service_Request() {
     const [selectedRequest, setSelectedRequest] = useState(null);
 
   const requestData = [
@@ -125,12 +125,10 @@ export default function Service_Request() {
 
         {/* Main Content */}
         <main className="flex-1 bg-[#ffffff80] rounded-lg p-4">
-          <h2 className="text-xl font-bold mb-4">Service Request</h2>
+          <h2 className="text-xl font-bold mb-4">Accept Service Request</h2>
           <ServiceRequestTable_Request data={requestData} onView={setSelectedRequest} />
-        <ServiceRequestDetails details={selectedRequest} />
-          {/* <DashboardStats />
-          <ServiceRequestTable />
-          <JobSummaryTable /> */}
+          <br/>
+          <ServiceRequestAccept />
         </main>
       </div>
 
