@@ -14,6 +14,8 @@ import Technician_Profile from './Pages/Technician/Profile'
 import AllServiceRequestPage from './Pages/Technician/AllServiceRequest';
 import AllJobSummaryPage from './Pages/Technician/AllJobSummary'
 import Accept_Service_Request from './Pages/Technician/ServiceRequestAccept';
+import Reject_Service_Request from './Pages/Technician/ServiceRequestReject';
+
 
 export default function App() {
   return (
@@ -37,6 +39,7 @@ export default function App() {
         <Route path="/tech/all-service-request" element={<AllServiceRequestPage />} />
         <Route path="/tech/all-job-summary" element={<AllJobSummaryPage />} />
         <Route path="/tech/accept-service-request" element={<Accept_Service_Request />} />
+        <Route path="/tech/reject-service-request" element={<Reject_Service_Request />} />
 
 
 
