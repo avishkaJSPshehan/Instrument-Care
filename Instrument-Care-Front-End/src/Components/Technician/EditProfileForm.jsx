@@ -49,10 +49,10 @@ export default function EditProfileForm() {
 
       {/* Action Buttons */}
       <div className="flex justify-between mt-4">
-        <button className="bg-transparent text-cyan-600 font-bold py-2 px-6 rounded">
+        <button className="bg-orange-300 text-black font-bold py-2 px-6 rounded hover:bg-orange-200">
           Clear
         </button>
-        <button className="bg-cyan-600 text-white font-bold py-2 px-6 rounded">
+        <button className="bg-orange-600 text-white font-bold py-2 px-6 rounded hover:bg-orange-400">
           Update Profile
         </button>
       </div>

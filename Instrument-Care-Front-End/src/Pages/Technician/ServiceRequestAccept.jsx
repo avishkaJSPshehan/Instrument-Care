@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import Navbar from '../../Components/Technician/Navbar'
-import Sidebar from '../../Components/Technician/Sidebar'
+import Navbar from '../../Components/Technician/Navbar';
+import Sidebar from '../../Components/Technician/Sidebar';
 import ServiceRequestTable_Request from "../../Components/Technician/ServiceRequestTable-Request";
-import Footer from '../../Components/Common/Footer'
-import ServiceRequestAccept from'../../Components/Technician/Service-Request-Accept';
+import Footer from '../../Components/Common/Footer';
+import ServiceRequestAccept from '../../Components/Technician/Service-Request-Accept';
+import ServiceRequestSuccess from '../../Components/Technician/ServiceRequestSuccess';
+import ServiceRequestFailed from '../../Components/Technician/ServiceRequestFaild';
 
 export default function Accept_Service_Request() {
-    const [selectedRequest, setSelectedRequest] = useState(null);
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false); // <-- new state
 
   const requestData = [
     {
@@ -109,6 +112,7 @@ export default function Accept_Service_Request() {
       description: "Calibration needed."
     }
   ];
+
   return (
     <>
       <Navbar />
@@ -127,14 +131,22 @@ export default function Accept_Service_Request() {
         <main className="flex-1 bg-[#ffffff80] rounded-lg p-4">
           <h2 className="text-xl font-bold mb-4">Accept Service Request</h2>
           <ServiceRequestTable_Request data={requestData} onView={setSelectedRequest} />
+
           <br/>
-          <ServiceRequestAccept />
+
+          {/* Conditional rendering */}
+          {!showSuccess ? (
+            <ServiceRequestAccept onSend={() => setShowSuccess(true)} />
+          ) : (
+            <ServiceRequestSuccess onBack={() => setShowSuccess(false)} />
+          )}
+
+          <br/>
+          {/* <ServiceRequestFailed/> */}
         </main>
       </div>
 
       <Footer />
     </>
-  )
+  );
 }
-
-
