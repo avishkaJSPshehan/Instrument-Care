@@ -81,12 +81,14 @@ export default function ServiceRequestDetails({ details }) {
       ></textarea>
 
       {/* Action Buttons */}
-      <div className="flex justify-center gap-4 mt-4">
-        <button className="bg-red-500 text-white px-6 py-2 rounded font-bold">
+      <div className="flex justify-center gap-4 mt-4 sm:justify-end">
+        <Link to='/tech/reject-service-request'>
+        <button className="bg-red-500 text-white px-6 py-2 rounded font-bold w-md">
           Reject
         </button>
+        </Link>
         <Link to='/tech/accept-service-request'>
-        <button className="bg-green-500 text-white px-6 py-2 rounded font-bold">
+        <button className="bg-green-500 text-white px-6 py-2 rounded font-bold w-md">
           Accept
         </button>
         </Link>
