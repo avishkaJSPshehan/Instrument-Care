@@ -8,8 +8,8 @@ export default function ProfileFormLeft({ formData, handleChange }) {
         Institute Name 
         <input
           type="text"
-          name="fullNames"
-          value={formData.fullName}
+          name="institute_name"
+          value={formData.institute_name}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -18,8 +18,8 @@ export default function ProfileFormLeft({ formData, handleChange }) {
         Designation
         <input
           type="text"
-          name="fullNames"
-          value={formData.fullName}
+          name="current_designation"
+          value={formData.current_designation}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -30,9 +30,9 @@ export default function ProfileFormLeft({ formData, handleChange }) {
       <label className="pl-4">
         Name 
         <input
-          type="email"
-          name="emails"
-          value={formData.email}
+          type="text"
+          name="supervisor_name"
+          value={formData.supervisor_name}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -41,9 +41,9 @@ export default function ProfileFormLeft({ formData, handleChange }) {
       <label className="pl-4">
         Designation 
         <input
-          type="email"
-          name="emails"
-          value={formData.email}
+          type="text"
+          name="supervisor_Designation"
+          value={formData.supervisor_Designation}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -53,8 +53,8 @@ export default function ProfileFormLeft({ formData, handleChange }) {
         Email 
         <input
           type="email"
-          name="emails"
-          value={formData.email}
+          name="supervisor_Email"
+          value={formData.supervisor_Email}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -63,9 +63,9 @@ export default function ProfileFormLeft({ formData, handleChange }) {
       <label className="pl-4">
         Contract No 
         <input
-          type="email"
-          name="emails"
-          value={formData.email}
+          type="text"
+          name="supervisor_Contract_No"
+          value={formData.supervisor_Contract_No}
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
@@ -113,30 +113,31 @@ export default function ProfileFormLeft({ formData, handleChange }) {
           <option value="3">Centrifuger</option>
           <option value="4">Gas Chromatograph & GC/MS</option>
           <option value="5">High Performance Liquid Chromatograph (HPLC)</option>
-          <option value="6"></option>
-          <option value="7"></option>
-          <option value="8"></option>
-          <option value="9"></option>
-          <option value="10"></option>
-          <option value="11"></option>
-          <option value="12"></option>
-          <option value="13"></option>
-          <option value="15"></option>
-          <option value="16"></option>
-          <option value="17"></option>
-          <option value="18"></option>
-          <option value="19"></option>
-          <option value="20"></option>
-          <option value="21"></option>
-          <option value="22"></option>
-          <option value="23"></option>
-          <option value="24"></option>
-          <option value="25"></option>
-          <option value="26"></option>
-          <option value="27"></option>
-          <option value="28"></option>
-          <option value="29"></option>
-          <option value="30"></option>
+          <option value="6">Ion Chromatograph</option>
+          <option value="7">Spectrophotometers (AAS, ICPMS, ICPOES, FTIR, IRMS, UV-Visible, NMP, RAMAN, etc)</option>
+          <option value="8">X-Ray Fluorescance Analyzers</option>
+          <option value="9">Distillation Apparatus</option>
+          <option value="10">Digestor</option>
+          <option value="11">PCR System</option>
+          <option value="12">Mixers/Shakers</option>
+          <option value="13">pH & Conductivity Meter</option>
+          <option value="14">Oven/Vacuum Oven</option>
+          <option value="15">Muffle Furnace</option>
+          <option value="16">Fume Hood</option>
+          <option value="17">Water Bath</option>
+          <option value="18">Incubator</option>
+          <option value="19">Hot Plate</option>
+          <option value="20">Evaporators</option>
+          <option value="21">Sonicating Apparatus</option>
+          <option value="22">Biochemistry Analyzers</option>
+          <option value="23">Particle Size Analyzer</option>
+          <option value="24">Bomb Calory Meters</option>
+          <option value="25">Shakers</option>
+          <option value="26">Dryers</option>
+          <option value="27">Distill Water Plant</option>
+          <option value="28">Glass Blowing Apparatus</option>
+          <option value="29">Other Instruments/Apparatus</option>
+          <option value="30">Machinery</option>
         </select>
       </label>
 

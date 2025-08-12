@@ -3,100 +3,95 @@ import React from "react";
 export default function ProfileFormRight({ formData, handleChange }) {
   return (
     <div className="flex flex-col gap-3">
-      <label>
-        Experiences
+      <h5 className="font-bold">Experiences</h5>
+      <label className="pl-4">
+        Company Name
         <input
           type="text"
-          name="experiences"
-          value={formData.experiences}
+          name="company_name"
+          value={formData.company_name}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+      <label className="pl-4">
+        Designation
+        <input
+          type="text"
+          name="company_designation"
+          value={formData.company_designation}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+      <label className="pl-4">
+        Years of Experience
+        <input
+          type="number"
+          name="years_of_experience"
+          value={formData.years_of_experience}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+
+      <h5 className="font-bold">Certificates</h5>
+
+      <label className="pl-4">
+        Certificate Name
+        <input
+          type="text"
+          name="certificate_name"
+          value={formData.certificate_name}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+      <label className="pl-4">
+        Certificate Issued Year
+        <input
+          type="date"
+          name="certificate_issued_year"
+          value={formData.certificate_issued_year}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+      <label className="pl-4">
+        Certificate Verification Code
+        <input
+          type="text"
+          name="certificate_verification_code"
+          value={formData.certificate_verification_code}
+          onChange={handleChange}
+          className="border rounded p-1 w-full"
+        />
+      </label>
+
+      <h5 className="font-bold">Other Details</h5>
+
+      <label className="pl-4">
+        Guarantee for Service
+        <input
+          type="text"
+          name="guarantee_for_service"
+          value={formData.guarantee_for_service}
           onChange={handleChange}
           className="border rounded p-2 w-full"
         />
       </label>
 
-      <label>
-        Certificates
+      <label className="pl-4">
+        Additional Comment ( if any)
         <input
           type="text"
-          name="certificates"
-          value={formData.certificates}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Specialist Instrument
-        <input
-          type="text"
-          name="specialistInstrument"
-          value={formData.specialistInstrument}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Working Number *
-        <input
-          type="text"
-          name="workingNumber"
-          value={formData.workingNumber}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Current Designation
-        <input
-          type="text"
-          name="designation"
-          value={formData.designation}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Working Hours
-        <input
-          type="text"
-          name="workingHours"
-          value={formData.workingHours}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Working Type
-        <input
-          type="text"
-          name="workingType"
-          value={formData.workingType}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Hourly Charge
-        <input
-          type="text"
-          name="hourlyCharge"
-          value={formData.hourlyCharge}
-          onChange={handleChange}
-          className="border rounded p-2 w-full"
-        />
-      </label>
-
-      <label>
-        Hourly Charge
-        <input
-          type="text"
-          name="hourlyCharge"
-          value={formData.hourlyCharge}
+          name="additional_comment"
+          value={formData.additional_comment}
           onChange={handleChange}
           className="border rounded p-2 w-full"
         />
