@@ -18,7 +18,7 @@ export default function ProfileImageUpload({ formData, handleChange }) {
       </div>
       
       <p className="text-sm text-gray-500">Brows Image From your computer</p>
-      <button className="mt-2 bg-cyan-600 text-white px-4 py-2 rounded">
+      <button className="mt-2 bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-400">
         Upload Image
       </button>
       
