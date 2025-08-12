@@ -14,15 +14,22 @@ export default function EditProfileForm() {
     experiences: "",
     certificates: "",
     specialistInstrument: "",
-    workingNumber: "",
-    designation: "",
-    workingHours: "",
-    workingType: "",
-    hourlyCharge: "",
+    current_designation: "",
     institute_name: "",
-    designation: "",
     laboratory_category: "",
     instrument_category: "",
+    supervisor_name: "",
+    supervisor_Designation: "",
+    supervisor_Email: "",
+    supervisor_Contract_No:"",
+    company_name: "",
+    company_designation: "",
+    years_of_experience: "",
+    certificate_name: "",
+    certificate_issued_year: "",
+    certificate_verification_code: "",
+    guarantee_for_service: "",
+    additional_comment: "",
   });
 
   const handleChange = (e) => {
@@ -30,7 +37,7 @@ export default function EditProfileForm() {
   };
 
   return (
-    <div className="bg-[#ffffff80] p-4 rounded-lg">
+    <div className="bg-[#ffffff80] p-4 rounded-lg font-poppins">
       <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
 
       {/* Top Section */}

@@ -3,8 +3,10 @@ import profileImage from '../../assets/images/profile-image.jpeg';
 
 export default function ProfileImageUpload({ formData, handleChange }) {
   return (
+    
     <div className="flex flex-col items-center p-4">
       {/* Profile Image Placeholder */}
+      
       <div className="border rounded-full flex items-center justify-center mb-2">
         
         <img
@@ -21,7 +23,7 @@ export default function ProfileImageUpload({ formData, handleChange }) {
       </button>
       
       <div className="flex flex-col gap-3">
-        <h5 className="font-bold">Personal Details</h5>
+        
 
       <label>
         Full Name *
