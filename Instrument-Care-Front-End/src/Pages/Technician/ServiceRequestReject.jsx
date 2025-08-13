@@ -5,6 +5,7 @@ import ServiceRequestTable_Request from "../../Components/Technician/ServiceRequ
 import Footer from '../../Components/Common/Footer';
 import ServiceRequestAccept from '../../Components/Technician/Service-Request-Accept';
 import ServiceRequestReject from '../../Components/Technician/Service-Request-Reject';
+import ServiceRequestRejectSuccess from '../../Components/Technician/ServiceRequestRejectSuccess';
 import ServiceRequestSuccess from '../../Components/Technician/ServiceRequestSuccess';
 import ServiceRequestFailed from '../../Components/Technician/ServiceRequestFaild';
 
@@ -139,7 +140,7 @@ export default function Reject_Service_Request() {
           {!showSuccess ? (
             <ServiceRequestReject onSend={() => setShowSuccess(true)} />
           ) : (
-            <ServiceRequestSuccess onBack={() => setShowSuccess(false)} />
+            <ServiceRequestRejectSuccess onBack={() => setShowSuccess(false)} />
           )}
 
           <br/>
