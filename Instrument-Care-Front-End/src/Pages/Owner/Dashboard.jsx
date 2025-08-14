@@ -1,13 +1,16 @@
 import React from 'react'
-import Navbar from '../../Components/Common/Navbar'
+import Navbar from '../../Components/owner/Navbar'
 import Footer from '../../Components/Common/Footer'
+import TechniciansCard from '../../Components/owner/TechniciansCard'
+import SearchBar from '../../Components/owner/SearchBar'
 
 
 export default function User_Dashboard() {
   return (
     <>
       <Navbar />
-        <h1>User Dashboard</h1>
+        <SearchBar />
+        <TechniciansCard/>
       <Footer />
     </>
   )
