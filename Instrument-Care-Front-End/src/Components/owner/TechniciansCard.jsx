@@ -33,35 +33,20 @@ const technicians = [
     institute: "UOC",
     img: "../src/assets/images/profile-image.jpeg",
   },
-  {
-    name: "Pramod Abeywickrama",
-    position: "Electrical Technician",
-    title: "Equipped with the latest diagnostic tools, I pinpoint engine and ECU issues to ensure optimal vehicle performance and reliability.",
-    followers: 241,
-    institute: "USJP",
-    img: "../src/assets/images/profile-image.jpeg",
-  },
-  {
-    name: "Pubudu Shehan",
-    position: "Electrical Technician",
-    title: "From leather stitching to ambient lighting, I transform vehicle interiors into luxurious, personalized spaces for every driver.",
-    followers: 395,
-    institute: "NSF",
-    img: "../src/assets/images/profile-image.jpeg",
-  },
+ 
 ];
 
-export default function RecentTechniciansSection() {
+export default function TechniciansCard() {
   return (
-    <section className="bg-[#1a1a1a] py-10 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#ffffff] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-white text-3xl font-semibold mb-8 text-center">
           <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
-                ── Recent Available Technicians ──
+                ── Our All Techinicians ──
         </span>
         </h2>
         
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-4 lg:grid-cols-4">
           {technicians.map((tech, index) => (
             <div
               key={index}

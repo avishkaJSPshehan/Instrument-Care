@@ -8,6 +8,7 @@ import ServiceRequestReject from '../../Components/Technician/Service-Request-Re
 import ServiceRequestRejectSuccess from '../../Components/Technician/ServiceRequestRejectSuccess';
 import ServiceRequestSuccess from '../../Components/Technician/ServiceRequestSuccess';
 import ServiceRequestFailed from '../../Components/Technician/ServiceRequestFaild';
+import ServiceRequestRejectFailed from '../../Components/Technician/ServiceRequestRejectFaild';
 
 export default function Reject_Service_Request() {
   const [selectedRequest, setSelectedRequest] = useState(null);
@@ -144,7 +145,7 @@ export default function Reject_Service_Request() {
           )}
 
           <br/>
-          {/* <ServiceRequestFailed/> */}
+          {/* <ServiceRequestRejectFailed/> */}
         </main>
       </div>
 
