@@ -15,7 +15,7 @@ export default function SearchBar() {
       {/* Search button */}
       <div>
         <button
-          className="bg-orange-400 text-white font-bold px-10 py-2 rounded-md hover:bg-[#b96f14] transition"
+          className="bg-orange-400 text-white font-bold px-10 py-2 rounded-md hover:bg-orange-600 transition"
         >
           SEARCH
         </button>
