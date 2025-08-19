@@ -15,6 +15,7 @@ import AllServiceRequestPage from './Pages/Technician/AllServiceRequest';
 import AllJobSummaryPage from './Pages/Technician/AllJobSummary'
 import Accept_Service_Request from './Pages/Technician/ServiceRequestAccept';
 import Reject_Service_Request from './Pages/Technician/ServiceRequestReject';
+import ViewProfile from './Pages/Owner/ViewProfile';
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
 
         {/* ===== User Routes ===== */}
         <Route path="/user/dashboard" element={<User_Dashboard />} />
+        <Route path="/user/view-profile" element={<ViewProfile />} />
       </Routes>
     </Router>
   );

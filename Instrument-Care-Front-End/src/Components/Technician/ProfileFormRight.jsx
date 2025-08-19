@@ -35,6 +35,7 @@ export default function ProfileFormRight({ formData, handleChange }) {
           onChange={handleChange}
           className="border rounded p-1 w-full"
         />
+        
       </label>
 
 

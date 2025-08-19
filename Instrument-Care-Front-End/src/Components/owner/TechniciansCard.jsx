@@ -1,4 +1,5 @@
 import { CheckCircle, Plus, Info,Award, Home, ArrowUpRight,SquareArrowOutUpRight} from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const technicians = [
   {
@@ -105,9 +106,9 @@ export default function TechniciansCard() {
     <section className="bg-[#ffffff] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-white text-3xl font-semibold mb-8 text-center">
-          <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
+          {/* <span className="text-sm font-semibold font-poppins uppercase text-amber-600 bg-orange-200 rounded-full px-4 py-1 inline-block mb-4 tracking-wide">
                 ── Our All Techinicians ──
-        </span>
+        </span> */}
         </h2>
         
         <div className="grid gap-4 sm:grid-cols-4 lg:grid-cols-4">
@@ -157,12 +158,16 @@ export default function TechniciansCard() {
 
               {/* Buttons */}
               <div className="mt-5 flex gap-2">
-                <button className="flex-1 bg-orange-300 text-black font-semibold text-sm py-2 rounded-full flex items-center justify-center gap-1 hover:bg-gray-100 transition">
-                  Viwe Profile <SquareArrowOutUpRight className="w-3 h-3" />
-                </button>
-                <button className="flex-1 bg-gray-800 text-white font-semibold text-sm py-2 rounded-full flex items-center justify-center gap-1 hover:bg-gray-700 transition">
-                  Service Request <ArrowUpRight className="w-4 h-4" />
-                </button>
+                <Link to="/user/view-profile">
+                  <button className="flex-1 bg-orange-300 text-black font-semibold text-sm py-2 p-3 rounded-full flex items-center justify-center gap-1 hover:bg-gray-100 transition">
+                    Viwe Profile <SquareArrowOutUpRight className="w-3 h-3" />
+                  </button>
+                </Link>
+                <Link to="">
+                  <button className="flex-1 bg-gray-800 text-white font-semibold text-sm py-2 p-2 rounded-full flex items-center justify-center gap-1 hover:bg-gray-700 transition">
+                    Service Request <ArrowUpRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
