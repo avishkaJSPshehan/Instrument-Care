@@ -3,8 +3,7 @@ import Navbar from '../../Components/owner/Navbar'
 import Footer from '../../Components/Common/Footer'
 import Tabs from "../../Components/owner/Tabs";
 import ProfileCard from "../../Components/owner/ProfileCard";
-import DashboardStats from '../../Components/Technician/DashboardStats';
-import JobSummaryTable_UserPage from '../../Components/owner/JobSummery-user-page';
+import ServiceRequestForm from "../../Components/owner/ServiceRequestForm";
 
 export default function ServiceRequest() {
   return (
@@ -34,7 +33,7 @@ export default function ServiceRequest() {
 
             {/* Right Side */}
             <div className="lg:col-span-2 flex flex-col">
-
+                <ServiceRequestForm />
             </div>
           </div>
         </div>
