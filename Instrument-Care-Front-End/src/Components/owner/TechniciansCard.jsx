@@ -159,12 +159,12 @@ export default function TechniciansCard() {
               {/* Buttons */}
               <div className="mt-5 flex gap-2">
                 <Link to="/user/view-profile">
-                  <button className="flex-1 bg-orange-300 text-black font-semibold text-sm py-2 p-3 rounded-full flex items-center justify-center gap-1 hover:bg-gray-100 transition">
+                  <button className="flex-1 bg-orange-300 text-black font-semibold text-sm py-2 p-3 rounded-full flex items-center justify-center gap-1 hover:bg-gray-100 transition hover:cursor-pointer">
                     Viwe Profile <SquareArrowOutUpRight className="w-3 h-3" />
                   </button>
                 </Link>
-                <Link to="">
-                  <button className="flex-1 bg-gray-800 text-white font-semibold text-sm py-2 p-2 rounded-full flex items-center justify-center gap-1 hover:bg-gray-700 transition">
+                <Link to="/user/service-request">
+                  <button className="flex-1 bg-gray-800 text-white font-semibold text-sm py-2 p-2 rounded-full flex items-center justify-center gap-1 hover:bg-gray-700 transition hover:cursor-pointer">
                     Service Request <ArrowUpRight className="w-4 h-4" />
                   </button>
                 </Link>

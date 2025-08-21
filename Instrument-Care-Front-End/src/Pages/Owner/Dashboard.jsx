@@ -10,8 +10,8 @@ export default function User_Dashboard() {
   return (
     <>
       <Navbar />
-        <TechnicianHeader />
-        <TechniciansCard/>
+      <TechnicianHeader />
+      <TechniciansCard/>
       <Footer />
     </>
   )
