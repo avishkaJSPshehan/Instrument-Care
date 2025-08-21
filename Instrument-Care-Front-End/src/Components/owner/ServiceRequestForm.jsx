@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function ServiceRequestForm() {
+export default function ServiceRequestForm({  onBack = () => {},
+  onSend = () => {},}) {
   return (
     <div className="w-full mx-auto bg-[#ffffff70] p-6 rounded-md shadow">
       <form className="space-y-6">
@@ -196,13 +197,15 @@ export default function ServiceRequestForm() {
         <div className="flex flex-col md:flex-row gap-4 mt-6">
           <button
             type="reset"
-            className="w-full md:w-1/2 border rounded py-2 font-semibold hover:bg-gray-100"
+            onClick={onBack}
+            className="w-full md:w-1/2 border rounded py-2 font-semibold hover:bg-gray-100 hover:cursor-pointer"
           >
             Clear Details
           </button>
           <button
             type="submit"
-            className="w-full md:w-1/2 bg-[#D68719] text-white font-semibold py-2 rounded hover:bg-[#b96f14] transition"
+            onClick={() => onSend()}
+            className="w-full md:w-1/2 bg-orange-400 text-white font-semibold py-2 rounded hover:bg-orange-500 transition hover:cursor-pointer"
           >
             Send a Service Request
           </button>

@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from "react";
 import Navbar from '../../Components/owner/Navbar'
 import Footer from '../../Components/Common/Footer'
 import Tabs from "../../Components/owner/Tabs";
 import ProfileCard from "../../Components/owner/ProfileCard";
 import ServiceRequestForm from "../../Components/owner/ServiceRequestForm";
+import ServiceRequestSuccess from '../../Components/owner/ServiceRequestSuccess';
+import ServiceRequestFail from '../../Components/owner/ServiceRequestFail';
 
 export default function ServiceRequest() {
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false); // <-- new state
+
   return (
     <>
       <Navbar />
@@ -33,7 +38,13 @@ export default function ServiceRequest() {
 
             {/* Right Side */}
             <div className="lg:col-span-2 flex flex-col">
-                <ServiceRequestForm />
+              {!showSuccess ? (
+                <ServiceRequestForm onSend={() => setShowSuccess(true)} />
+              ) : (
+                <ServiceRequestSuccess onBack={() => setShowSuccess(false)} />
+              )}
+
+                {/* <ServiceRequestForm /> */}
             </div>
           </div>
         </div>
